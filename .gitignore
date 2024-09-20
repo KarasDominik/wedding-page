@@ -1,0 +1,9 @@
+# IntelliJ
+.idea/
+
+# Maven
+page/target/
+
+# Database
+*.db
+identifier.sqlite

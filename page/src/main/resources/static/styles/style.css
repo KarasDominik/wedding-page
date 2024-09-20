@@ -1,0 +1,548 @@
+html, body {
+    scroll-behavior: smooth;
+    margin: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+section {
+    text-align: center;
+}
+
+.background-container {
+    background: url('../images/background-image.jpg') no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+}
+
+.logo {
+    margin: auto auto auto 50px;
+    height: 70px;
+    width: auto;
+}
+
+.dropdown {
+    display: none;
+}
+
+.navbar {
+    background: transparent;
+    border-bottom: 3px solid black;
+    width: 100%;
+    height: 8%;
+    box-sizing: border-box;
+    display: flex; /* Umożliwia elastyczne rozmieszczanie elementów */
+    align-items: center; /* Wyrównanie w pionie */
+    padding: 0 20px; /* Padding wewnętrzny, aby dodać trochę przestrzeni po bokach */
+    justify-content: flex-end; /* Wyrównanie elementów na prawo */
+    position: relative;
+    z-index: 1000;
+}
+
+/* Stylizacja dla linków w navbarze */
+.nav-links {
+    margin-right: 10%;
+    list-style: none; /* Usunięcie punktów listy */
+    padding: 0; /* Usunięcie paddingu */
+    display: flex; /* Umożliwia rozmieszczanie elementów w poziomie */
+}
+
+/* Stylizacja dla elementów listy w navbarze */
+.nav-links li {
+    margin-right: 10px; /* Margines po prawej stronie każdego linku */
+    margin-left: 30px;
+    font-family: "Mate", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Stylizacja dla linków */
+.nav-links a {
+    text-decoration: none; /* Usunięcie podkreślenia */
+    color: black; /* Kolor tekstu */
+    font-size: 16px; /* Rozmiar czcionki */
+    transition: color 0.3s; /* Płynna zmiana koloru po najechaniu */
+    font-weight: bold;
+}
+
+.flag-icon {
+    height: 20px;
+    width: auto;
+}
+
+.nav-links a:hover {
+    color: #007bff; /* Kolor tekstu linków po najechaniu */
+}
+
+.text-content {
+    width: 100%;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    text-align: center;
+    color: white;
+}
+
+#couple-names {
+    font-size: 80px;
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    margin-bottom: 0;
+    color: black;
+}
+
+#date {
+    margin-top: 5px;
+    font-size: 32px;
+    color: black;
+}
+
+.header {
+    text-align: center;
+    font-size: 50px;
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    margin-bottom: 25px;
+    color: black;
+}
+
+.couple-image {
+    margin: 20px 60px 0 60px;
+    width: 30%;
+    height: auto;
+    border: 2px solid #ccc; /* Add a border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    padding: 10px; /* Add some padding */
+    border-radius: 10px; /* Add rounded corners */
+}
+
+.couple-introduction p {
+    font-family: "Georgia", serif;
+    font-size: 18px;
+    font-style: italic;
+    line-height: 1.6;
+    color: #333;
+    text-align: justify;
+    margin: 50px auto;
+}
+
+.sub-header {
+    text-align: center;
+    font-size: 25px;
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    margin-bottom: 0;
+    color: black;
+}
+
+.main-info {
+    width: 15%;
+    margin: 0 auto;
+    font-size: 19px;
+    text-align: left;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.main-info {
+    width: 25%;
+}
+
+.info-field {
+    display: flex;
+    align-items: center;
+    height: 60px;
+}
+
+.main-info.wedding {
+    width: 30%;
+}
+
+.info-field.wedding {
+    justify-content: center;
+}
+
+.info-field img {
+    width: 25px;
+}
+
+#right {
+    margin-left: auto;
+}
+
+.icon {
+    font-size: 25px !important;
+}
+
+.info-content {
+    margin-left: 2%;
+}
+
+.group {
+    display: flex;
+    justify-content: left;
+}
+
+.main-info p {
+    margin-left: 10px;
+}
+
+.description {
+    width: 30%;
+    line-height: 1.5;
+    margin: 0 auto;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.map {
+    display: block;
+    width: 60%;
+    margin: 1% auto;
+    border: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.gallery-button {
+    margin-top: 10px;
+    width: 15%;
+    height: 30px;
+    background-color: #ecdea7; /* Zielone tło */
+    color: black;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-button:hover {
+    background-color: #c7b989;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-button:active {
+    background-color: #ecdea7;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transform: translateY(2px);
+}
+
+/* Stylizacja dla przycisku wyłączonego */
+.gallery-button:disabled {
+    background-color: #cccccc; /* Szary kolor sugerujący wyłączenie */
+    color: #666666; /* Przyciemniony tekst */
+    cursor: not-allowed; /* Zmieniony wskaźnik myszy na zakaz */
+    box-shadow: none; /* Brak cienia, aby przycisk wydawał się "płaski" */
+    transform: none; /* Bez efektów transformacji */
+}
+
+.gallery {
+    width: 100%;
+    padding: 0;
+    margin: 40px 0 0 0;
+    border: none;
+    border-spacing: 0;
+    box-sizing: border-box;
+    border-collapse: collapse;
+    line-height: 0;
+    display: flex; /* Use flexbox to align images in rows */
+    flex-wrap: wrap; /* Allow images to wrap to the next line */
+    font-size: 0; /* Remove the gaps between inline elements */
+}
+
+.gallery img {
+    width: 25%;
+    height: 400px;
+    object-fit: cover;
+    padding: 0;
+    margin: 0;
+    border: none;
+    border-spacing: 0;
+    box-sizing: border-box;
+    font-size: initial; /* Reset font-size for images */
+}
+
+.playlist {
+    width: 60%;
+    height: 352px;
+    border-radius: 12px;
+}
+
+form {
+    font-family: 'Times New Roman', Times, serif;
+    width: 30%;
+    margin: 20px auto;
+    font-weight: 500;
+    font-size: 15px;
+    padding: 0;
+}
+
+input {
+    width: 100%;
+    margin-bottom: 5%;
+    height: 35px;
+    box-sizing: border-box;
+    padding: 0 0 0 10px;
+    line-height: 1.5;
+}
+
+textarea {
+    font-family: 'Times New Roman', Times, serif;
+    width: 100%;
+    display: block;
+    margin-bottom: 5%;
+    padding: 5px 0 0 10px;
+    box-sizing: border-box;
+    height: 100px;
+    line-height: 1.5;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+    font-size: 16px;
+}
+
+.obligatory-field::after {
+    content: '  *';
+    color: #e81111;
+    font-size: 13px;
+}
+
+input[type="submit"] {
+    background-color: black;
+    color: white;
+    border: none;
+    width: 100%;
+    height: 30px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.select-options label.option {
+    margin-bottom: 0;
+    padding: 0;
+    width: 100%;
+    height: 40px;
+}
+
+input[type="checkbox"] {
+    height: 12px;
+    margin-left: 8px;
+    width: 12px;
+}
+
+.custom-select-container {
+    width: 30%;
+    position: relative;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.select-box {
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    user-select: none;
+}
+
+.select-options {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 1;
+    font-size: 10px;
+}
+
+.select-options label {
+    display: flex;
+    align-items: center;
+    padding: 8px 10px;
+    cursor: pointer;
+}
+
+.select-options label:hover {
+    background-color: #f1f1f1;
+}
+
+.select-options input {
+    margin-right: 10px;
+}
+
+/* Show the dropdown when the container is clicked */
+.custom-select-container.active .select-options {
+    display: block;
+}
+
+.select-container {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.bi-chevron-up {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    background-color: black;
+    padding: 15px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    width: 100%;
+    bottom: 0;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .logo {
+        margin: auto auto auto 25px;
+        height: 50px;
+        width: auto;
+    }
+
+    .text-content {
+        top: 5%;
+    }
+
+    #couple-names {
+        font-size: 50px;
+    }
+
+    #date {
+        font-size: 24px;
+    }
+
+    .hamburger-menu {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        margin-left: auto;
+        margin-right: 5vw;
+        z-index: 2000;
+    }
+
+    .hamburger-menu .line {
+        width: 25px;
+        height: 3px;
+        background-color: black;
+        margin: 3px 0;
+    }
+
+    .navbar {
+        padding: 0;
+    }
+
+    .navbar .nav-links {
+        display: none;
+    }
+
+    .dropdown {
+        display: none;
+        background: grey;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    .dropdown .nav-links {
+        flex-direction: column;
+        width: 100%;
+        margin: 0 0 0 auto;
+    }
+
+    .dropdown.open {
+        display: flex;
+    }
+
+    .nav-links li{
+        margin-left: 0;
+        margin-right: 0;
+        padding-top: 15px;
+        padding-left: 15px;
+        border-bottom: 2px black solid;
+    }
+
+    .nav-links li.exit-sign {
+        padding: 0;
+        margin-left: auto;
+        margin-right: 15px;
+        height: 30px;
+        border: none;
+    }
+
+    .cross-sign {
+        color: white;
+        font-size: 30pt;
+    }
+
+    .main-info {
+        width: 80%;
+    }
+
+    .couple-image {
+        margin: 0 auto;
+        width: 40%;
+        padding: 5px;
+    }
+
+    .couple-introduction p {
+        margin-top: 20px;
+    }
+
+    .description {
+        font-size: 14px;
+        width: 70%;
+    }
+
+    .gallery-button {
+        width: 40%;
+    }
+
+    .gallery img {
+        height: 250px;
+        width: 50%;
+    }
+
+    .playlist {
+        width: 100%;
+        height: 370px;
+        border-radius: 12px;
+    }
+
+    .map {
+        width: 100%;
+    }
+
+    form {
+        width: 90%;
+    }
+}
