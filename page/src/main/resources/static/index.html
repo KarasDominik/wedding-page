@@ -14,32 +14,31 @@
 <body>
 <div class="background-container">
     <nav class="navbar">
-        <img class="logo" src="images/logo-removebg-preview.png" alt="logo">
         <div class="hamburger-menu">
             <div class="line"></div>
             <div class="line"></div>
             <div class="line"></div>
         </div>
         <ul class="nav-links">
-            <li><a href="#the-happy-couple">Para Młoda</a></li>
-            <li><a href="#location">Lokalizacja</a></li>
-            <li><a href="#gallery">Galeria</a></li>
-            <li><a href="#playlist">Weselna playlista</a></li>
+            <li><a class="lang" data-lang-pl="Para Młoda" data-lang-en="Groom & Bride" href="#the-happy-couple">Para Młoda</a></li>
+            <li><a class="lang" data-lang-pl="Lokalizacja" data-lang-en="Location" href="#location">Lokalizacja</a></li>
+            <li><a class="lang" data-lang-pl="Galeria" data-lang-en="Gallery" href="#gallery">Galeria</a></li>
+            <li><a class="lang" data-lang-pl="Weselna playlista" data-lang-en="Wedding playlist" href="#playlist">Weselna playlista</a></li>
             <li><a href="#rsvp">RSVP</a></li>
-            <li><a><img class="flag-icon" src="images/united-kingdom.png" alt="united-kingdom-flag"></a></li>
-            <li><a><img class="flag-icon" src="images/poland.png" alt="polish-flag"></a></li>
+            <li><a><img class="flag-icon en-flag" src="images/united-kingdom.png" alt="united-kingdom-flag"></a></li>
+            <li><a><img class="flag-icon pl-flag" src="images/poland.png" alt="polish-flag"></a></li>
         </ul>
     </nav>
     <div class="dropdown">
         <ul class="nav-links">
             <li class="exit-sign"><span class="cross-sign">&times;</span></li>
-            <li class="section"><a href="#the-happy-couple">Para Młoda</a></li>
-            <li class="section"><a href="#location">Lokalizacja</a></li>
-            <li class="section"><a href="#gallery">Galeria</a></li>
-            <li class="section"><a href="#playlist">Weselna playlista</a></li>
-            <li class="section"><a href="#rsvp">RSVP</a></li>
-            <li><a><img class="flag-icon" src="images/united-kingdom.png" alt="united-kingdom-flag"></a></li>
-            <li><a><img class="flag-icon" src="images/poland.png" alt="polish-flag"></a></li>
+            <li><a class="lang" data-lang-pl="Para Młoda" data-lang-en="Groom & Bride" href="#the-happy-couple">Para Młoda</a></li>
+            <li><a class="lang" data-lang-pl="Lokalizacja" data-lang-en="Location" href="#location">Lokalizacja</a></li>
+            <li><a class="lang" data-lang-pl="Galeria" data-lang-en="Gallery" href="#gallery">Galeria</a></li>
+            <li><a class="lang" data-lang-pl="Weselna playlista" data-lang-en="Wedding playlist" href="#playlist">Weselna playlista</a></li>
+            <li><a href="#rsvp">RSVP</a></li>
+            <li><a><img class="flag-icon en-flag" src="images/united-kingdom.png" alt="united-kingdom-flag"></a></li>
+            <li><a><img class="flag-icon pl-flag" src="images/poland.png" alt="polish-flag"></a></li>
         </ul>
     </div>
     <div class="text-content">
@@ -48,20 +47,29 @@
     </div>
 </div>
 <section id="the-happy-couple">
-    <p class="header">Para Młoda</p>
+    <p data-lang-pl="Para Młoda" data-lang-en="Groom & Bride" class="lang header">Para Młoda</p>
     <div class="couple-introduction">
-        <img class="couple-image" src="images/bride.jpg" alt="Julia">
         <img class="couple-image" src="images/groom.jpg" alt="Dominik">
-    <p class="description">Nasza historia zaczęła się na studiach, gdzie los połączył nasze ścieżki.
-        Od tamtej pory wspólnie odkrywamy świat, mając już za sobą niesamowite podróże do 8 różnych krajów.
-        Każda z tych wypraw umocniła naszą relację, a jednym z najpiękniejszych momentów były nasze zaręczyny na magicznej Maderze.
-        Teraz z radością czekamy na kolejną wielką przygodę – wspólne życie jako mąż i żona.
-    </p>
+        <img class="couple-image" src="images/bride.jpg" alt="Julia">
+        <p class="description lang"
+           data-lang-pl="Nasza historia zaczęła się na studiach, gdzie los połączył nasze ścieżki.
+           Od tamtej pory wspólnie odkrywamy świat, mając już za sobą niesamowite podróże do 8 różnych krajów.
+           Każda z tych wypraw umocniła naszą relację, a jednym z najpiękniejszych momentów były nasze zaręczyny na magicznej Maderze.
+           Teraz z radością czekamy na kolejną wielką przygodę – wspólne życie jako mąż i żona."
+           data-lang-en="Our story began at university, where fate brought us together.
+           Since then, we have been discovering the world together, already having incredible journeys to 8 different countries.
+           Each of these trips strengthened our relationship, and one of the most beautiful moments was our engagement on magical Madeira.
+           Now we are joyfully looking forward to the next great adventure – life together as husband and wife.">
+            Nasza historia zaczęła się na studiach, gdzie los połączył nasze ścieżki.
+            Od tamtej pory wspólnie odkrywamy świat, mając już za sobą niesamowite podróże do 8 różnych krajów.
+            Każda z tych wypraw umocniła naszą relację, a jednym z najpiękniejszych momentów były nasze zaręczyny na magicznej Maderze.
+            Teraz z radością czekamy na kolejną wielką przygodę – wspólne życie jako mąż i żona.
+        </p>
     </div>
 </section>
 <section id="location">
-    <p class="header">Gdzie i kiedy?</p>
-    <p class="sub-header">Ślub</p>
+    <p class="lang header" data-lang-pl="Gdzie i kiedy?" data-lang-en="Where and when?">Gdzie i kiedy?</p>
+    <p class="lang sub-header" data-lang-pl="Ślub" data-lang-en="Wedding">Ślub</p>
     <div class="main-info">
         <div class="group">
             <div class="info-field"><i class="fa fa-calendar icon"></i><p>11.07.2025</p></div>
@@ -70,22 +78,26 @@
         <div class="info-field ceremony"><img src="images/wedding-ring.png" alt="wedding-ring"><p>Parafia rzymskokatolicka pw. św. Floriana w Krężnicy Jarej</p></div>
     </div>
     <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2502.8012352513506!2d22.460255977186147!3d51.149016371734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4722f9dbc41d9741%3A0xd871031316750c6d!2sParafia%20rzymskokatolicka%20pw.%20%C5%9Bw.%20Floriana%20w%20Kr%C4%99%C5%BCnicy%20Jarej!5e0!3m2!1spl!2spl!4v1724789548415!5m2!1spl!2spl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    <p class="sub-header">Wesele</p>
+    <p class="lang sub-header" data-lang-pl="Wesele" data-lang-en="Wedding party">Wesele</p>
     <div class="main-info wedding">
         <div class="info-field wedding"><i class='fas'>&#xf79f;</i><p>Kmicic Hotel & Restauracja</p></div>
     </div>
-    <div class="description">
+    <div class="lang description"
+         data-lang-pl="Po ceremonii zapraszamy na przyjęcie weselne do Hotelu Kmicic, który od kościoła położony jest niecałe 10 minut drogi samochodem."
+         data-lang-en="After the ceremony, we invite you to the wedding party at Hotel Kmicic, which is located less than a 10-minute drive from the church.">
         Po ceremonii zapraszamy na przyjęcie weselne do Hotelu Kmicic, który od kościoła położony jest niecałe 10 minut drogi samochodem.
     </div>
     <img src="images/kmicic-sala.png" alt="Widok sali weselnej Kmicic">
     <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2500.908162542369!2d22.460981877187912!3d51.18391557174148!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4722f7ee8d999399%3A0xdefc2158af2e70fa!2sKmicic%20Hotel%20%26%20Restauracja!5e0!3m2!1spl!2spl!4v1724789468931!5m2!1spl!2spl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </section>
 <section id="gallery">
-    <p class="header">Galeria</p>
-    <div class="description">
+    <p class="lang header" data-lang-pl="Galeria" data-lang-en="Gallery">Galeria</p>
+    <div class="lang description"
+         data-lang-pl="Aby uzyskać dostęp do zdjęć z wesela możecie skorzystać z poniższego przycisku. Przycisk zostanie aktywowany kiedy zdjęcia będą gotowe, natomiast hasło będzie podane na zaproszeniu."
+         data-lang-en="To access the wedding photos, you can use the button below. The button will be activated once the photos are ready, and the password will be provided on the invitation.">
         Aby uzyskać dostęp do zdjęć z wesela możecie skorzystać z poniższego przycisku. Przycisk zostanie aktywowany kiedy zdjęcia będą gotowe, natomiast hasło będzie podane na zaproszeniu.
     </div>
-    <button class="gallery-button" disabled>Zdjęcia z wesela</button>
+    <button class="lang gallery-button" data-lang-pl="Zdjęcia z wesela" data-lang-en="Wedding photos" disabled>Zdjęcia z wesela</button>
     <div class="gallery">
         <img src="images/gallery/image-1.jpg" alt="Zdjęcie z galerii">
         <img src="images/gallery/image-2.jpg" alt="Zdjęcie z galerii">
@@ -102,46 +114,80 @@
     </div>
 </section>
 <section id="playlist">
-    <p class="header">Weselna playlista</p>
-    <div class="description">
-        Lista piosenek, które kojarzą wam się z Parą Młodą lub przy których po prostu lubicie się bawić. Przy potwierdzaniu obecności w sekcji RSVP macie możliwość podania swoich propozycji, które będą uwzględnione przy wyborze utworów na wesele.
+    <p class="lang header" data-lang-pl="Weselna playlista" data-lang-en="Wedding playlist">Weselna playlista</p>
+    <div class="lang description"
+         data-lang-pl="Lista piosenek, które kojarzą wam się z Parą Młodą lub przy których po prostu lubicie się bawić.
+         Przy potwierdzaniu obecności w sekcji RSVP macie możliwość podania swoich propozycji, które będą uwzględnione przy wyborze utworów na wesele."
+         data-lang-en="A list of songs that remind you of the Bride and Groom or simply ones you enjoy dancing to.
+         When confirming your attendance in the RSVP section, you have the option to submit your suggestions, which will be considered when selecting songs for the wedding.">
+        Lista piosenek, które kojarzą wam się z Parą Młodą lub przy których po prostu lubicie się bawić.
+        Przy potwierdzaniu obecności w sekcji RSVP macie możliwość podania swoich propozycji, które będą uwzględnione przy wyborze utworów na wesele.
     </div>
     <iframe class="playlist" src="https://open.spotify.com/embed/playlist/2cnsTSgf30bxSugzrOJSSn?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 </section>
 <section id="rsvp">
     <p class="header">RSVP</p>
-    <div class="description">
-        Bardzo nam miło będzie gościć Was w tak ważnym dla nas dniu! W tej sekcji macie możliwość potwierdzenia obecności na weselu, a także przekazania nam informacji dotyczących preferowanego rodzaju alkoholu czy specjalnych wymagań żywieniowych. Nie zapomnijcie także o zaproponowaniu wybranego utworu do naszej playlisty!
+    <div class="lang description"
+         data-lang-pl="Bardzo nam miło będzie gościć Was w tak ważnym dla nas dniu!
+        W tej sekcji macie możliwość potwierdzenia obecności na weselu, a także przekazania nam informacji dotyczących preferowanego rodzaju alkoholu czy specjalnych wymagań żywieniowych.
+        Nie zapomnijcie także o zaproponowaniu wybranego utworu do naszej playlisty!"
+         data-lang-en="We will be so happy to have you with us on such an important day!
+         In this section, you can confirm your attendance at the wedding, as well as share any information regarding your preferred type of alcohol or special dietary requirements.
+         Don't forget to suggest a song for our playlist!">
+        Bardzo nam miło będzie gościć Was w tak ważnym dla nas dniu!
+        W tej sekcji macie możliwość potwierdzenia obecności na weselu, a także przekazania nam informacji dotyczących preferowanego rodzaju alkoholu czy specjalnych wymagań żywieniowych.
+        Nie zapomnijcie także o zaproponowaniu wybranego utworu do naszej playlisty!
     </div>
     <div>
         <form id="rsvp-form" action="/api/v1/attendee" method="post">
-            <label for="names" class="obligatory-field">Imiona i nazwiska</label>
+            <label class="lang obligatory-field" for="names" data-lang-pl="Imiona i nazwiska" data-lang-en="Names">Imiona i nazwiska</label>
             <input type="text" id="names" name="names" required>
 
-            <label>Preferowany rodzaj alkoholu</label>
+            <label class="lang" data-lang-pl="Preferowany rodzaj alkoholu" data-lang-en="Preferred alcohol type">Preferowany rodzaj alkoholu</label>
             <div class="custom-select-container">
-                <div class="select-box">Wybierz opcje</div>
+                <div class="select-box lang" data-lang-pl="Wybierz opcję" data-lang-en="Choose an option">Wybierz opcję</div>
                 <div class="select-options">
-                    <label class="option"><input type="checkbox" value="VODKA"><p>Wódka</p></label>
-                    <label class="option"><input type="checkbox" value="WHISKY"><p>Whisky</p></label>
-                    <label class="option"><input type="checkbox" value="WINE"><p>Wino</p></label>
-                    <label class="option"><input type="checkbox" value="BEER"><p>Piwo</p></label>
-                    <label class="option"><input type="checkbox" value="GIN"><p>Gin</p></label>
-                    <label class="option"><input type="checkbox" value="OTHER"><p>Inny</p></label>
-                    <label class="option"><input type="checkbox" value="NOT_DRINKING"><p>Nie piję</p></label>
+                    <label class="option">
+                        <input type="checkbox" value="VODKA">
+                        <p class="lang" data-lang-pl="Wódka" data-lang-en="Vodka">Wódka</p>
+                    </label>
+                    <label class="option">
+                        <input type="checkbox" value="WHISKY">
+                        <p class="lang" data-lang-pl="Whisky" data-lang-en="Whisky">Whisky</p>
+                    </label>
+                    <label class="option">
+                        <input type="checkbox" value="WINE">
+                        <p class="lang" data-lang-pl="Wino" data-lang-en="Wine">Wino</p>
+                    </label>
+                    <label class="option">
+                        <input type="checkbox" value="BEER">
+                        <p class="lang" data-lang-pl="Piwo" data-lang-en="Beer">Piwo</p>
+                    </label>
+                    <label class="option">
+                        <input type="checkbox" value="GIN">
+                        <p class="lang" data-lang-pl="Gin" data-lang-en="Gin">Gin</p>
+                    </label>
+                    <label class="option">
+                        <input type="checkbox" value="OTHER">
+                        <p class="lang" data-lang-pl="Inny" data-lang-en="Other">Inny</p>
+                    </label>
+                    <label class="option">
+                        <input type="checkbox" value="NOT_DRINKING">
+                        <p class="lang" data-lang-pl="Nie piję" data-lang-en="I don't drink">Nie piję</p>
+                    </label>
                 </div>
             </div>
 
-            <label for="song">Piosenka</label>
-            <input type="text" id="song" name="song">
+            <label for="song" class="lang" data-lang-pl="Piosenka" data-lang-en="Song">Piosenka</label>
+            <input type="text" id="song" name="song" placeholder="">
 
-            <label for="dietaryRequirements">Specjalne wymagania dietetyczne</label>
-            <input type="text" id="dietaryRequirements" name="dietaryRequirements">
+            <label for="dietaryRequirements" class="lang" data-lang-pl="Specjalne wymagania dietetyczne" data-lang-en="Special dietary requirements">Specjalne wymagania dietetyczne</label>
+            <input type="text" id="dietaryRequirements" name="dietaryRequirements" placeholder="">
 
-            <label for="message">Wiadomość</label>
-            <textarea id="message" name="message" rows="4"></textarea>
+            <label for="message" class="lang" data-lang-pl="Wiadomość" data-lang-en="Message">Wiadomość</label>
+            <textarea id="message" name="message" rows="4" placeholder=""></textarea>
 
-            <input id="submit-button" type="submit" value="Wyślij">
+            <input id="submit-button" type="submit" value="Wyślij" class="lang" data-lang-pl="Wyślij" data-lang-en="Send">
         </form>
     </div>
 </section>

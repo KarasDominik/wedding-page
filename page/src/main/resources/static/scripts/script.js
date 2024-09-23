@@ -8,6 +8,10 @@ document.addEventListener('DOMContentLoaded', function () {
     const customSelectContainer = document.querySelector('.custom-select-container');
     const selectBox = customSelectContainer.querySelector('.select-box');
     const selectOptions = customSelectContainer.querySelectorAll('.select-options input');
+    const plFlags = document.querySelectorAll('.pl-flag');
+    const enFlags = document.querySelectorAll('.en-flag');
+    const langElements = document.querySelectorAll('.lang');
+    let submitButton = document.getElementById('submit-button');
 
     selectBox.addEventListener('click', function () {
         customSelectContainer.classList.toggle('active');
@@ -42,9 +46,17 @@ document.addEventListener('DOMContentLoaded', function () {
             body: json
         }).then(response => {
             if (response.ok) {
-                const submitButton = document.getElementById('submit-button');
+                const currentLanguage = localStorage.getItem('language') || 'pl'; // Domyślnie 'pl', jeśli brak zapisu w localStorage
+                let successMessage = '';
+
+                if (currentLanguage === 'pl') {
+                    successMessage = 'Dziękujemy!';
+                } else if (currentLanguage === 'en') {
+                    successMessage = 'Thank you!';
+                }
+
                 submitButton.disabled = true;
-                submitButton.value = 'Dziękujemy!';
+                submitButton.value = successMessage;
                 submitButton.style.backgroundColor = '#4CAF50'; // Change to a darker green color
                 submitButton.style.color = 'white'; // Change text color to white for better contrast
                 submitButton.style.cursor = 'not-allowed'; // Change cursor to indicate disabled state
@@ -91,4 +103,30 @@ document.addEventListener('DOMContentLoaded', function () {
             scrollButton.style.display = "none";
         }
     };
+
+    function changeLanguage(lang) {
+        if (lang === 'pl') {
+            langElements.forEach(function (element) {
+                element.textContent = element.getAttribute('data-lang-pl');
+            });
+        } else if (lang === 'en') {
+            langElements.forEach(function (element) {
+                element.textContent = element.getAttribute('data-lang-en');
+            });
+        }
+        submitButton.value = submitButton.getAttribute('data-lang-' + lang);
+        localStorage.setItem('language', lang);
+    }
+
+    plFlags.forEach(function (flag) {
+        flag.addEventListener('click', function () {
+            changeLanguage('pl');
+        });
+    });
+
+    enFlags.forEach(function (flag) {
+        flag.addEventListener('click', function () {
+            changeLanguage('en');
+        });
+    });
 });

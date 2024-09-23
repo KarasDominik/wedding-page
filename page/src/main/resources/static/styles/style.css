@@ -16,12 +16,6 @@ section {
     width: 100vw;
 }
 
-.logo {
-    margin: auto auto auto 50px;
-    height: 70px;
-    width: auto;
-}
-
 .dropdown {
     display: none;
 }
@@ -69,6 +63,10 @@ section {
 .flag-icon {
     height: 20px;
     width: auto;
+}
+
+.flag-icon:hover {
+    cursor: pointer;
 }
 
 .nav-links a:hover {
@@ -422,12 +420,6 @@ footer {
 
 @media only screen and (max-width: 600px) {
 
-    .logo {
-        margin: auto auto auto 25px;
-        height: 50px;
-        width: auto;
-    }
-
     .text-content {
         top: 5%;
     }
@@ -506,6 +498,10 @@ footer {
 
     .main-info {
         width: 80%;
+    }
+
+    .main-info.wedding {
+        width: 60%;
     }
 
     .couple-image {
