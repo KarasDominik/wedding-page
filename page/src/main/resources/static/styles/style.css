@@ -3,6 +3,8 @@ html, body {
     margin: 0;
     width: 100%;
     overflow-x: hidden;
+    background-color: #202020;
+    color: white;
 }
 
 section {
@@ -113,7 +115,7 @@ section {
     font-size: 18px;
     font-style: italic;
     line-height: 1.6;
-    color: #333;
+    /*color: #333;*/
     text-align: justify;
     margin: 1.5% auto;
 }
@@ -127,7 +129,7 @@ section {
     font-style: normal;
     margin-bottom: 25px;
     padding-top: 1.5%;
-    color: black;
+    /*color: black;*/
 }
 
 .sub-header {
@@ -138,7 +140,7 @@ section {
     font-weight: 700;
     font-style: normal;
     margin-bottom: 0;
-    color: black;
+    /*color: black;*/
 }
 
 .main-info {
@@ -298,6 +300,10 @@ input {
     line-height: 1.5;
 }
 
+input checkbox {
+
+}
+
 textarea {
     font-family: 'Times New Roman', Times, serif;
     width: 100%;
@@ -323,8 +329,8 @@ label {
 }
 
 input[type="submit"] {
-    background-color: black;
-    color: white;
+    background-color: #b3b3b3;
+    color: black;
     border: none;
     width: 100%;
     height: 30px;
@@ -334,9 +340,14 @@ input[type="submit"] {
 
 .select-options label.option {
     margin-bottom: 0;
+    background-color: #353535;
     padding: 0;
     width: 100%;
     height: 40px;
+}
+
+.select-options label.option:hover {
+    background-color: #0c0c0c;
 }
 
 input[type="checkbox"] {
@@ -406,15 +417,15 @@ input[type="checkbox"] {
     bottom: 20px;
     right: 20px;
     display: none;
-    background-color: black;
+    background-color: white;
     padding: 15px;
-    color: white;
+    color: black;
     border: none;
     cursor: pointer;
 }
 
 footer {
-    background-color: #333;
+    background-color: black;
     color: #fff;
     text-align: center;
     padding: 5px 0;
