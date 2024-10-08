@@ -46,13 +46,13 @@ document.addEventListener('DOMContentLoaded', function () {
             body: json
         }).then(response => {
             if (response.ok) {
-                const currentLanguage = localStorage.getItem('language') || 'pl'; // Domyślnie 'pl', jeśli brak zapisu w localStorage
+                const currentLanguage = localStorage.getItem('language') || 'pl';
                 let successMessage = '';
 
                 if (currentLanguage === 'pl') {
-                    successMessage = 'Dziękujemy!';
+                    successMessage = 'Dziękujemy, do zobaczenia na weselu!';
                 } else if (currentLanguage === 'en') {
-                    successMessage = 'Thank you!';
+                    successMessage = 'Thank you, see you at the wedding!';
                 }
 
                 submitButton.disabled = true;
