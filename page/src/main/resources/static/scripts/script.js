@@ -116,6 +116,15 @@ document.addEventListener('DOMContentLoaded', function () {
         }
         submitButton.value = submitButton.getAttribute('data-lang-' + lang);
         localStorage.setItem('language', lang);
+        enableSubmitFormButton(lang);
+    }
+
+    function enableSubmitFormButton(lang) {
+        submitButton.disabled = false;
+        submitButton.value = submitButton.getAttribute('data-lang-' + lang);
+        submitButton.style.backgroundColor = '#b3b3b3'; // Change to a darker green color
+        submitButton.style.color = 'white'; // Change text color to white for better contrast
+        submitButton.style.cursor = 'pointer'; // Change cursor to indicate disabled state
     }
 
     plFlags.forEach(function (flag) {
