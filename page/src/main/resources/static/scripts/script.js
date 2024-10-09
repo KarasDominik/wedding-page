@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const hamburger = document.querySelector('.hamburger-menu');
     const dropdown = document.querySelector('.dropdown');
     const crossSign = document.querySelector('.cross-sign');
-    const navLinks = document.querySelectorAll('.dropdown .nav-links li');
+    const navLinks = document.querySelectorAll('.dropdown .nav-links li.section');
     const scrollButton = document.querySelector('.bi-chevron-up');
     const rsvpForm = document.querySelector('form');
     const customSelectContainer = document.querySelector('.custom-select-container');
