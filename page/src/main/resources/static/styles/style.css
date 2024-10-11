@@ -101,7 +101,7 @@ section {
 }
 
 .couple-image {
-    margin: 20px 60px 0 60px;
+    margin: 0 60px 0 60px;
     width: 23%;
     height: auto;
     border: 2px solid #ccc; /* Add a border */
