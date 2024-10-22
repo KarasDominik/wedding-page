@@ -2,7 +2,7 @@
 .idea/
 
 # Maven
-page/target/
+target/
 
 # Database
 *.db
