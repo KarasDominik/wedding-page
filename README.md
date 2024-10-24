@@ -15,8 +15,11 @@ The website is live at: [**julia-dominik.pl**](http://julia-dominik.pl)
   - Spring Boot
 - **Database:**
   - SQLite
-- **Cloud:**
+- **Deployment:**
   - AWS
+  - Docker (Jib)
+- **CI/CD:**
+  - GitHub Actions
 
 ---
 
@@ -34,7 +37,7 @@ The website is live at: [**julia-dominik.pl**](http://julia-dominik.pl)
    git clone https://github.com/KarasDominik/wedding-page.git
 2. Navigate to the project directory:
    ```bash
-   cd wedding-page/page
+   cd wedding-page
 3. Run the application:
    ```bash
    ./mvnw spring-boot:run
