@@ -31,16 +31,16 @@ jobs:
     - name: Push docker image to docker hub
       run: mvn compile jib:build -Dimage=docker.io/${{ vars.DOCKERHUB_USERNAME }}/wedding-page:latest
 
-    - name: Set up SSH
-      uses: webfactory/ssh-agent@v0.9.0
-      with:
-          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-
-    - name: Deploy Docker image to EC2
-      run: |
-        ssh -o StrictHostKeyChecking=no ec2-user@51.20.185.33 << 'EOF'
-        sudo usermod -aG docker $USER
-        sudo docker pull ${{ vars.DOCKERHUB_USERNAME }}/wedding-page:latest
-        sudo docker kill $(docker ps -aq) || true
-        docker run -d -p 8080:8080 ${{ vars.DOCKERHUB_USERNAME }}/wedding-page:latest
-        EOF
+#    - name: Set up SSH
+#      uses: webfactory/ssh-agent@v0.9.0
+#      with:
+#          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+#
+#    - name: Deploy Docker image to EC2
+#      run: |
+#        ssh -o StrictHostKeyChecking=no ec2-user@51.20.185.33 << 'EOF'
+#        sudo usermod -aG docker $USER
+#        sudo docker pull ${{ vars.DOCKERHUB_USERNAME }}/wedding-page:latest
+#        sudo docker kill $(docker ps -aq) || true
+#        docker run -d -p 8080:8080 ${{ vars.DOCKERHUB_USERNAME }}/wedding-page:latest
+#        EOF
