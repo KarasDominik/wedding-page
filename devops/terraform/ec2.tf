@@ -3,14 +3,14 @@ resource "aws_instance" "main" {
   instance_type               = "t3.micro"
   subnet_id                   = aws_subnet.web-az1.id
   security_groups             = [aws_security_group.ec2-security-group.id]
-  key_name                    = aws_key_pair.ec2-key-pair.key_name
   associate_public_ip_address = true
+  key_name                    = "wedding-page-key-pair"
   tags = {
     Name = "wedding-page"
   }
 }
 
-resource "aws_key_pair" "ec2-key-pair" {
+resource "aws_key_pair" "ssh-key" {
   key_name   = "wedding-page-key-pair"
   public_key = file("~/.ssh/id_rsa.pub")
 }

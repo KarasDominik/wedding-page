@@ -20,14 +20,16 @@ resource "aws_security_group" "db-security-group" {
 
 resource "aws_db_instance" "main" {
   allocated_storage      = 20
-  db_name                = "weddingpagedb"
+  db_name                = var.database_name
   engine                 = "postgres"
   engine_version         = "16.3"
   instance_class         = "db.t4g.micro"
-  username               = "postgres"
-  password               = "password"
+  username               = var.database_user
+  password               = var.database_password
   db_subnet_group_name   = aws_db_subnet_group.main.name
   vpc_security_group_ids = [aws_security_group.db-security-group.id]
+  identifier = "wedding-page-db"
+  final_snapshot_identifier = "wedding-page-db-final-snapshot"
   tags = {
     Name = "wedding-page-db"
   }

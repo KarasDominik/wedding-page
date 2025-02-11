@@ -1,0 +1,22 @@
+services:
+  app:
+    depends_on:
+      - db
+    container_name: wedding-page
+    image: docker.io/dominik4871/wedding-page:latest
+    ports:
+      - "8080:8080"
+  db:
+    container_name: wedding-db
+    image: postgres:16-alpine
+    ports:
+      - "5432:5432"
+    environment:
+        POSTGRES_USER: postgres
+        POSTGRES_PASSWORD: postgres
+        POSTGRES_DB: wedding
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+
+volumes:
+  postgres-data:

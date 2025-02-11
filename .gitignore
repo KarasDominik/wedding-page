@@ -4,6 +4,6 @@
 # Maven
 target/
 
-# Database
-*.db
-identifier.sqlite
+# Terraform
+.terraform/
+*.tfstate*
