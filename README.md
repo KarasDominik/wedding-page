@@ -5,7 +5,7 @@ This website is designed to provide information about my wedding, including even
 The website is live at: [**julia-dominik.pl**](http://julia-dominik.pl)
 
 ## Architecture
-![Image](https://github.com/user-attachments/assets/d344f768-a628-40a5-a0ae-07561f04b3af)
+![Image](https://github.com/user-attachments/assets/a5db30c9-e330-4232-b8aa-b6a547f55c20)
 ---
 
 ## Technologies Used:
@@ -20,6 +20,7 @@ The website is live at: [**julia-dominik.pl**](http://julia-dominik.pl)
 - **Deployment:**
   - AWS
   - Docker (Jib)
+  - Terraform
 - **CI/CD:**
   - GitHub Actions
 
