@@ -13,6 +13,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const langElements = document.querySelectorAll('.lang');
     let submitButton = document.getElementById('submit-button');
 
+    changeLanguage(localStorage.getItem('language') || 'pl');
+
     selectBox.addEventListener('click', function () {
         customSelectContainer.classList.toggle('active');
     });
