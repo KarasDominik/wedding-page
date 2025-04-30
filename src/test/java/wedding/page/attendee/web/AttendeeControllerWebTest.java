@@ -33,7 +33,7 @@ class AttendeeControllerWebTest {
 
     @ParameterizedTest
     @MethodSource(value = "invalidRequests")
-    void shouldThrowWhenNamesIsBlank(String request) throws Exception {
+    void shouldThrowWhenRequestIsInvalid(String request) throws Exception {
         mockMvc.perform(post("/api/v1/attendee")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(request))
@@ -67,23 +67,11 @@ class AttendeeControllerWebTest {
                         }
                         """
                 ),
-                // names too short
-                Arguments.of(
-                        """
-                        {
-                            "names": "aa",
-                            "song": "Darude - Sandstorm",
-                            "dietaryRequirements": null,
-                            "alcoholPreferences": ["BEER", "WINE"],
-                            "message": "Looking forward to have fun!"
-                        }
-                        """
-                ),
                 // names too long
                 Arguments.of(
                         """
                         {
-                            "names": "TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest",
+                            "names": "TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest",
                             "song": "Darude - Sandstorm",
                             "dietaryRequirements": null,
                             "alcoholPreferences": ["BEER", "WINE"],
@@ -96,19 +84,7 @@ class AttendeeControllerWebTest {
                         """
                         {
                             "names": "TestContent",
-                            "song": "TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest",
-                            "dietaryRequirements": null,
-                            "alcoholPreferences": ["BEER", "WINE"],
-                            "message": "Looking forward to have fun!"
-                        }
-                        """
-                ),
-                // song too short
-                Arguments.of(
-                        """
-                        {
-                            "names": "TestContent",
-                            "song": "aa",
+                            "song": "TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest",
                             "dietaryRequirements": null,
                             "alcoholPreferences": ["BEER", "WINE"],
                             "message": "Looking forward to have fun!"
@@ -121,19 +97,7 @@ class AttendeeControllerWebTest {
                         {
                             "names": "TestContent",
                             "song": "Test",
-                            "dietaryRequirements": "TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest",
-                            "alcoholPreferences": ["BEER", "WINE"],
-                            "message": "Looking forward to have fun!"
-                        }
-                        """
-                ),
-                // requirements too short
-                Arguments.of(
-                        """
-                        {
-                            "names": "TestContent",
-                            "song": "Test",
-                            "dietaryRequirements": "aa",
+                            "dietaryRequirements": "TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest",
                             "alcoholPreferences": ["BEER", "WINE"],
                             "message": "Looking forward to have fun!"
                         }
