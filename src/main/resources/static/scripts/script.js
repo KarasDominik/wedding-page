@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const enFlags = document.querySelectorAll('.en-flag');
     const langElements = document.querySelectorAll('.lang');
     let submitButton = document.getElementById('submit-button');
+    const shareButton = document.getElementById('share-button')
 
     changeLanguage(localStorage.getItem('language') || 'pl');
 
@@ -139,5 +140,9 @@ document.addEventListener('DOMContentLoaded', function () {
         flag.addEventListener('click', function () {
             changeLanguage('en');
         });
+    });
+
+    shareButton.addEventListener('click', function() {
+        window.location.href = 'https://drive.google.com/drive/folders/1mv4iG89B9mwoVdMzt4_oxLbJfWih5ziR?hl=PL';
     });
 });
