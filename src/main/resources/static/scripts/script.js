@@ -12,7 +12,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const enFlags = document.querySelectorAll('.en-flag');
     const langElements = document.querySelectorAll('.lang');
     let submitButton = document.getElementById('submit-button');
-    const shareButton = document.getElementById('share-button')
+    const shareButton = document.getElementById('share-button');
+    const photosButton = document.getElementById('photosButton');
 
     changeLanguage(localStorage.getItem('language') || 'pl');
 
@@ -144,5 +145,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     shareButton.addEventListener('click', function() {
         window.location.href = 'https://drive.google.com/drive/folders/1mv4iG89B9mwoVdMzt4_oxLbJfWih5ziR?hl=PL';
+    });
+
+    photosButton.addEventListener('click', function() {
+        window.location.href = 'https://photos.app.goo.gl/4uAhjCmb73DMHxf36';
     });
 });
